@@ -1,0 +1,17 @@
+# Terraform local files
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Variable files (keep your secrets safe)
+*.tfvars
+*.tfvars.json
+
+# Ignore AWS credentials
+.aws/
+*.pem
