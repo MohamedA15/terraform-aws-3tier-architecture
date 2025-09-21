@@ -27,30 +27,7 @@ Public inbound: HTTP (80), SSH (22)
 Private inbound: MySQL (3306) from VPC only
 Egress: unrestricted
 
-🌐 High-Level Diagram
-                  Internet
-                     │
-              ┌──────▼──────┐
-              │   Public    │
-              │    ALB      │
-              └──────┬──────┘
-                     │
-         ┌───────────┴───────────┐
-         │                       │
-   Public Subnet A         Public Subnet B
-   (EC2 via ASG)           (EC2 via ASG)
-         │                       │
- ┌───────▼───────┐       ┌───────▼───────┐
- │   Private ALB │       │   Private ALB │
- └───────┬───────┘       └───────┬───────┘
-         │                       │
-   Private Subnet A        Private Subnet B
-   (App EC2 via ASG)       (App EC2 via ASG)
-         │                       │
-         └──────────────┬────────┘
-                        │
-                   Amazon RDS
-                (Private Subnets)
+
 
 ⚙️ Deployment
 Prerequisites
