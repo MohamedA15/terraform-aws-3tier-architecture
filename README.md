@@ -36,7 +36,7 @@ AWS CLI installed and configured (aws configure)
 An AWS account with IAM permissions
 
 Steps
-# Initialize Terraform
+# Initialise Terraform
 terraform init
 
 # Preview resources to be created
@@ -48,22 +48,25 @@ terraform apply -auto-approve
 # Destroy resources when finished
 terraform destroy -auto-approve
 
-💸 Cost Considerations
+Cost Considerations
 Running this project will incur costs on AWS:
 EC2 (t2.micro)
 RDS (db.t3.micro)
 NAT Gateway (≈ $0.045/hour + data transfer)
 Elastic Load Balancers
 
-👉 To avoid unexpected bills, destroy resources when not in use:
+To avoid unexpected bills, destroy resources when not in use:
+
 terraform destroy -auto-approve
 
-🔐 Security Notes
+Security Notes
+
 Access keys are not stored in this repo (use environment variables or AWS CLI config).
 Private subnets are not internet-facing.
 Database is not public — only accessible inside the VPC.
 
-🚀 Future Improvements
+ Future Improvements
+
 Add HTTPS support with ACM certificates
 Implement Route53 DNS for custom domain
 Add CloudWatch monitoring and logging
